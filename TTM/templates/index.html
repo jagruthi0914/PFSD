@@ -1,0 +1,41 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> ONLINE JOB PORTAL </title>
+<link type="text/css" rel="stylesheet" href="{% static 'css/style.css'%}">
+</head>
+ <body  style="background-image: url('{% static 'images/2.jpg' %}'); background-repeat: no-repeat; background-attachment: fixed;background-color: rgba(255, 255, 255, 0.3);
+ backdrop-filter: blur(5px);background-size: cover">
+<div class="navbar">
+<a href="{%url 'register' %}">Sign-Up</a>&nbsp&nbsp
+<a href="{% url 'login' %}">login</a>&nbsp&nbsp
+<a href="{% url 'home' %}">Home</a>&nbsp&nbsp
+{% block 'b1' %}
+<a href="{% url 'about' %}">About</a>&nbsp&nbsp
+<a href="{% url 'contact' %}">ContactUs</a>&nbsp&nbsp
+    </div>
+<h2 align="center"><font color="lavender">ONLINE JOB PORTAL</font></h2>
+ <style>
+        .navbar {
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+    </style>
+{% endblock %}
+</body>
+</html>
